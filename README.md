@@ -18,6 +18,8 @@
 
 -[ ] taint (server-only)
 
+-[ ] Use Next/image Component
+
 -[ ] Error Management (sentry)
 
 -[ ] routing/image page (parallel routing)
