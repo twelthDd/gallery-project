@@ -14,7 +14,7 @@
 
 -[x] Add authentication (clerk)
 
--[ ] Add image upload
+-[x] Add image upload
 
 -[ ] taint (server-only)
 
