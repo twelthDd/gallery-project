@@ -16,9 +16,9 @@
 
 -[x] Add image upload
 
--[ ] taint (server-only)
+-[x] taint (server-only)
 
--[ ] Use Next/image Component
+-[x] Use Next/image Component
 
 -[ ] Error Management (sentry)
 
