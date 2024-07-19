@@ -20,7 +20,7 @@
 
 -[x] Use Next/image Component
 
--[ ] Error Management (sentry)
+-[x] Error Management (sentry)
 
 -[ ] routing/image page (parallel routing)
 
