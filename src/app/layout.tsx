@@ -6,7 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "~/styles/globals.css";
 
 
-// import { Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import { TopNav } from "./_components/TopNav";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
@@ -19,6 +19,11 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
 export default function RootLayout(props: {
   children: React.ReactNode;
   modal: React.ReactNode;
@@ -26,9 +31,7 @@ export default function RootLayout(props: {
   return (
     <ClerkProvider>
       <html>
-        <body>
-        
-            <NextSSRPlugin
+      <NextSSRPlugin
           /**
            * The `extractRouterConfig` will extract **only** the route configs
            * from the router to prevent additional information from being
@@ -37,8 +40,11 @@ export default function RootLayout(props: {
            */
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
-          <TopNav />
-          {props.children}
+        <body className={`font-sans ${inter.variable}`}>
+          <div className="h-screen grid grid-rows-[auto_1fr]">
+            <TopNav />
+            <main className="overflow-y-scroll">{props.children}</main>
+          </div>
           {props.modal}
           <div id="modal-root" />
           </body>
