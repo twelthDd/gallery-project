@@ -22,7 +22,7 @@
 
 -[x] Error Management (sentry)
 
--[ ] routing/image page (parallel routing)
+-[x] routing/image page (parallel routing)
 
 -[ ] Delete Button (server actions)
 
