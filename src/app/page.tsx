@@ -1,5 +1,3 @@
-
-
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +12,12 @@ async function Images() {
     <div className="flex flex-wrap justify-center gap-4 p-4">
       {images.map((image) => (
         <div key={image.id} className="flex h-48 w-48 flex-col">
-        <Link  key={image.id} href={`/photos/${image.id}`} passHref legacyBehavior={false}>
+          <Link
+            key={image.id}
+            href={`/photos/${image.id}`}
+            passHref
+            legacyBehavior={false}
+          >
             <Image
               src={image.url}
               style={{ objectFit: "contain" }}

@@ -1,10 +1,8 @@
-
 // import "~/styles/globals.css";
 import "@uploadthing/react/styles.css";
 
 import { ClerkProvider } from "@clerk/nextjs";
 import "~/styles/globals.css";
-
 
 import { Inter } from "next/font/google";
 import { TopNav } from "./_components/TopNav";
@@ -12,7 +10,6 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { Toaster } from "~/components/ui/sonner";
-
 
 export const metadata = {
   title: "Gallery Project",
@@ -32,7 +29,7 @@ export default function RootLayout(props: {
   return (
     <ClerkProvider>
       <html>
-      <NextSSRPlugin
+        <NextSSRPlugin
           /**
            * The `extractRouterConfig` will extract **only** the route configs
            * from the router to prevent additional information from being
@@ -42,15 +39,15 @@ export default function RootLayout(props: {
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
         <body className={`font-sans ${inter.variable} dark`}>
-          <div className="h-screen grid grid-rows-[auto_1fr]">
+          <div className="grid h-screen grid-rows-[auto_1fr]">
             <TopNav />
             <main className="overflow-y-scroll">{props.children}</main>
           </div>
           {props.modal}
           <div id="modal-root" />
           <Toaster />
-          </body>
+        </body>
       </html>
-      </ClerkProvider>
+    </ClerkProvider>
   );
 }
