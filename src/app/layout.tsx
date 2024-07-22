@@ -40,7 +40,7 @@ export default function RootLayout(props: {
            */
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
-        <body className={`font-sans ${inter.variable}`}>
+        <body className={`font-sans ${inter.variable} dark`}>
           <div className="h-screen grid grid-rows-[auto_1fr]">
             <TopNav />
             <main className="overflow-y-scroll">{props.children}</main>
