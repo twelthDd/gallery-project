@@ -26,10 +26,10 @@
 
 - [x] update upload button
 
-- [ ] chadcn/ui implementation (toasts)
+- [x] chadcn/ui implementation (toasts)
+
+- [x] Analytics (posthog)
 
 - [ ] Delete Button (server actions)
-
-- [ ] Analytics (posthog)
 
 - [ ] Rate Limiting (upstash)
